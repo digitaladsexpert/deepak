@@ -72,10 +72,28 @@
       box-shadow: 0 4px 12px rgba(0, 94, 255, 0.3);
     }
 
+    .telegram-btn img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
     .telegram-btn:hover {
       background-color: #003fcc;
       transform: scale(1.05);
       box-shadow: 0 6px 18px rgba(0, 94, 255, 0.5);
+    }
+
+    /* Pulse animation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    .pulse {
+      animation: pulse 1.5s infinite;
     }
 
     @media (max-width: 480px) {
@@ -97,7 +115,7 @@
 <body>
   <div class="overlay">
     <div class="container">
-      <img src="https://lp1.traderinsights.live/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-19-at-09.39.27.jpeg" alt="Profile" class="profile-pic" />
+      <img src="https://lp1.traderinsights.live/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-19-at-09.39.27.jpeg" alt="Karol Mehta - Professional Trader" class="profile-pic" />
       <div class="title"><h4>ROCHIT SINGH STOCKS</h4></div>
 
       <ul class="bullet-points">
@@ -108,7 +126,10 @@
         <li>👇 Click Below to Join Now for FREE! 👇</li>
       </ul>
 
-      <a class="telegram-btn" href="https://telegram.me/+d0Wa2S3gu8RkZjM9" target="_blank">🚀 JOIN FREE TELEGRAM</a>
+      <a class="telegram-btn pulse" href="https://telegram.me/+d0Wa2S3gu8RkZjM9" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" />
+        JOIN FREE TELEGRAM
+      </a>
     </div>
   </div>
 </body>
