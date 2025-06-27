@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
- 
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      height: 100%;
+      color: #ffffff;
       background: url('https://gujaratitrader.live/wp-content/uploads/2025/05/file_000000005b48622f80c955706d04fa59-1.png') no-repeat center center fixed;
       background-size: cover;
-      color: #ffffff;
     }
 
     .container {
@@ -21,42 +19,49 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
       text-align: center;
-      height: 100%;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4); /* slight dim for contrast */
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     .profile-pic {
-      width: 100px;
+      width: 120px;
       border-radius: 20px;
       margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
-    .title {
-      font-size: 32px;
-      font-weight: bold;
+    .title h4 {
+      font-size: 28px;
       margin: 10px 0;
     }
 
-    .subtitle {
-      font-size: 20px;
-      margin-bottom: 20px;
+    .bullet-points {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+      max-width: 90%;
+      margin: 10px auto;
+    }
+
+    .bullet-points li {
+      margin: 10px 0;
     }
 
     .telegram-btn {
       background-color: #005eff;
       color: white;
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 14px 24px;
+      font-size: 16px;
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      margin: 20px 0;
-      border: 3px solid red;
+      margin-top: 20px;
+      border: 2px solid red;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 94, 255, 0.3);
+      display: inline-block;
     }
 
     .telegram-btn:hover {
@@ -65,15 +70,19 @@
       box-shadow: 0 6px 18px rgba(0, 94, 255, 0.5);
     }
 
-    .bullet-points {
-      list-style: none;
-      padding: 0;
-      font-size: 16px;
-      max-width: 500px;
-    }
+    @media (max-width: 480px) {
+      .title h4 {
+        font-size: 22px;
+      }
 
-    .bullet-points li {
-      margin: 10px 0;
+      .telegram-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+      }
+
+      .profile-pic {
+        width: 90px;
+      }
     }
   </style>
 </head>
@@ -81,15 +90,12 @@
   <div class="container">
     <img src="https://lp1.traderinsights.live/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-19-at-09.39.27.jpeg" alt="Karol Mehta - Professional Trader" class="profile-pic" />
     <div class="title"><h4>ROCHIT SINGH STOCKS</h4></div>
-   
-
 
     <ul class="bullet-points">
       <li>⚡ Highly Qualified and Certified by the Sheffield Hallam University, USA ⚡</li>
       <li>⚡ Asia's No 1 Best Intraday Trader ⚡</li>
       <li>⚡ Highly Expert In analysing the daily Trading Graph ⚡</li>
       <li>⚡ 10001 % FREE Reports... ⚡</li>
-     
       <li>👇 Click Below to Join Now FREE!... 👇</li>
     </ul>
 
