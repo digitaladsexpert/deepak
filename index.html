@@ -1,213 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Channel Invite</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4150952005118081');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4150952005118081&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
-  
-  
-  
-  
-  <style>
-  :root{
-    --bg:#0c0f16;
-    --card:#111625;
-    --card2:#0f1422;
-    --text:#eaf1ff;
-    --muted:#a9b3c7;
-    --accent1:#33e6ff;
-    --accent2:#5b7bff;
-    --accent3:#ff3ed1;
-    --success:#26f0a6;
-    --danger:#ff4d6d;
-    --ring: 0 0 0 2px rgba(51,230,255,.25), 0 0 40px rgba(51,230,255,.20);
-    --shadow: 0 10px 30px rgba(0,0,0,.35);
-    --radius: 22px;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0; background: radial-gradient(1200px 600px at 70% -10%, rgba(91,123,255,.15), transparent 60%),
-               radial-gradient(900px 600px at -10% 20%, rgba(51,230,255,.12), transparent 60%),
-               var(--bg);
-    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-    color: var(--text);
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  }
-  .wrap{max-width:440px;margin:0 auto;padding:34px 18px 60px}
-  .center{display:flex;align-items:center;justify-content:center;text-align:center}
-  .avatar{
-    width:124px;height:124px;border-radius:50%;
-    padding:6px;background:linear-gradient(135deg,var(--accent1),var(--accent2));
-    box-shadow: 0 0 0 8px rgba(91,123,255,.12), 0 18px 60px rgba(91,123,255,.35);
-    margin: 10px auto 16px; position:relative;
-  }
-  .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%; display:block; box-shadow: inset 0 0 40px rgba(0,0,0,.25)}
-  h1{font-size:24px;letter-spacing:.2px;margin:14px 0 6px;color:#6ef3ff;text-shadow:0 0 18px rgba(51,230,255,.35)}
-  .sub{
-    font-size:14.5px;color:var(--muted);line-height:1.55;margin:0 auto 14px;max-width:340px
-  }
-  .age{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
-       display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:#8ea3c7;margin:6px auto 22px;background:rgba(255,255,255,.02)}
-  .btn{
-    display:flex;gap:10px;align-items:center;justify-content:center;
-    width:100%;padding:16px 18px;border-radius:999px;
-    background: linear-gradient(135deg,var(--accent1),var(--accent2));
-    color:#00131a;font-weight:800;letter-spacing:.3px;text-decoration:none;
-    box-shadow: 0 16px 40px rgba(79,121,255,.35), inset 0 -2px 0 rgba(255,255,255,.2);
-    transition: transform .15s ease, box-shadow .2s ease; margin: 6px 0 22px
-  }
-  .btn:active{transform: translateY(1px)}
-  .btn--ghost{
-    background: linear-gradient(135deg,#8ac8ff22,#6f8cff22);
-    color:#e9f4ff;border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow)
-  }
-  .card{
-    background: linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
-    border:1px solid rgba(255,255,255,.06);
-    border-radius: var(--radius); padding:18px 16px; box-shadow: var(--shadow); margin: 14px 0 20px
-  }
-  .card h2{font-size:18px;margin:4px 0 12px;color:#7fffe8;text-shadow:0 0 16px rgba(38,240,166,.28)}
-  .feature{
-    display:flex;align-items:center;gap:12px;
-    background: linear-gradient(180deg,var(--card),var(--card2));
-    border:1px solid rgba(255,255,255,.06);
-    border-radius: 16px; padding:14px 14px; margin:10px 0;
-    box-shadow: inset 0 0 0 1px rgba(51,230,255,.04);
-  }
-  .badge{font-size:20px}
-  .f-title{font-weight:700;letter-spacing:.2px}
-  .f-sub{font-size:12.5px;color:#9fb0c9;margin-top:2px}
-  .cta-small{font-size:13px;color:#b9c7dd;margin-top:8px}
-  .count{
-    margin:16px 0 0; padding:26px 16px;border-radius:20px;
-    background: radial-gradient(400px 140px at 50% 0%, rgba(255,62,209,.15), transparent 70%),
-                linear-gradient(180deg,#141222,#0b0b16);
-    border:1px solid rgba(255,62,209,.28);
-    box-shadow: 0 0 40px rgba(255,62,209,.18), inset 0 0 24px rgba(255,62,209,.12);
-    text-align:center
-  }
-  .time{font-size:36px;font-weight:800;letter-spacing:.4rem;color:#ff7bf0;text-shadow:0 0 22px rgba(255,62,209,.45)}
-  .hint{font-size:12px;color:#a7b0c4;margin-top:8px}
-  .disclaimer{
-    margin:22px 0 0; font-size:11.5px; color:#93a3bd; line-height:1.55;
-    background: rgba(255,255,255,.03); border:1px dashed rgba(255,255,255,.1);
-    padding:12px;border-radius:12px
-  }
-  .footer{margin-top:26px;text-align:center;font-size:11.5px;color:#7f8dab}
-  .footer a{color:#a8c7ff;text-decoration:none}
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Join Free Channel — Landing</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Rubik',sans-serif;background:#fff8f0;color:#111;text-align:center}
+  .wrap{max-width:900px;margin:auto;padding:30px}
+  .headline{font-size:32px;font-weight:700;color:#d9432b;margin:20px 0}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:#1565c0;color:#fff;
+       border-radius:8px;text-decoration:none;font-weight:600;font-size:16px}
+  .btn:hover{background:#0f4a87}
+  .channels-list{font-size:20px;font-weight:600;margin:18px 0}
+  .features{margin:20px auto;font-size:18px;line-height:1.6}
+  .countdown{margin-top:24px;display:flex;justify-content:center;gap:20px}
+  .unit{text-align:center}
+  .num{font-size:24px;font-weight:700;color:#c53030}
+  .label{font-size:12px;color:#666;text-transform:uppercase;margin-top:4px}
 </style>
 </head>
 <body>
-  <div class="wrap">
+<div class="wrap">
+  <div class="headline">!! ORIGINAL VIP !! JOIN NOW !!</div>
+  <a class="btn" href="https://t.me/yourchannel" target="_blank">🚀 JOIN FREE CHANNEL</a>
 
-    <!-- AVATAR -->
-    <div class="avatar">
-      <img src="logo.png" alt="Channel Avatar">
-    </div>
-
-    <!-- TITLE -->
-    <div class="center">
-      <div>
-        <h1>TASHAN WIN GAME PREDICTION</h1>
-        <p class="sub">Smart insights, pattern education & community updates. No financial or wagering guarantees.</p>
-        <div class="age">18+</div>
-      </div>
-    </div>
-
-    <!-- PRIMARY CTA -->
-    <a id="ctaTop" class="btn" href="https://telegram.me/+inqfdUkMsHM5MjY9" rel="noopener nofollow">📲 Join Telegram Channel</a>
-
-    <!-- WHAT YOU'LL GET -->
-    <div class="card">
-      <h2>🏆 What You'll Get</h2>
-
-      <div class="feature">
-        <div class="badge">🎯</div>
-        <div>
-          <div class="f-title">High-Quality Setups</div>
-          <div class="f-sub">Well-explained entries, risk notes & recap posts.</div>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="badge">🧠</div>
-        <div>
-          <div class="f-title">Strategy Lessons</div>
-          <div class="f-sub">Short primers to help you understand the logic.</div>
-        </div>
-      </div>
-
-      <div class="center">
-        <p class="cta-small">Join thousands of learners improving decision-making every day.</p>
-      </div>
-    </div>
-
-    <!-- SECONDARY CTA -->
-    <a id="ctaBottom" class="btn btn--ghost" href="https://telegram.me/+inqfdUkMsHM5MjY9" rel="noopener nofollow">📲 Join Telegram Channel</a>
-
-    <!-- COUNTDOWN -->
-    <div class="count">
-      <div id="timer" class="time">00:20</div>
-      <div class="hint" id="hint">Redirecting to special offer…</div>
-    </div>
-
-    <!-- DISCLAIMER -->
-    <div class="disclaimer">
-      <strong>Disclaimer:</strong> This page is for education/community updates only. We do not offer gambling or “sure-shot” claims. Past performance doesn’t guarantee future outcomes. Participate responsibly and follow your local laws & platform policies.
-    </div>
-
-    <div class="footer">
-      © <span id="yr"></span> TashanWin • <a href="https://telegram.me/+inqfdUkMsHM5MjY9">Terms</a> • <a href="#">Privacy</a>
-    </div>
+  <div class="channels-list">
+    @कल्याण &nbsp; @श्रीदेवी &nbsp; @टाइमबाज़ार &nbsp; @मिलनगेम
   </div>
 
+  <div class="features">
+    🎯 <b>Original Tirupati</b> — Trusted Community for daily updates.<br/>
+    🔥 Play Big. Win Bigger.<br/>
+    ✨ Join with Original — Your Lucky Star!<br/>
+    ✅ Fast Results | Live Support | 100% Trusted
+  </div>
+
+  <a class="btn" href="https://t.me/yourchannel" target="_blank">🚀 JOIN FREE CHANNEL</a>
+
+  <div class="countdown">
+    <div class="unit"><div class="num" id="seconds">10</div><div class="label">Seconds</div></div>
+  </div>
+</div>
+
 <script>
-/* ------- CONFIGURE HERE ------- */
-const TELEGRAM_LINK = "https://telegram.me/+inqfdUkMsHM5MjY9";   // your Telegram invite
-const REDIRECT_URL  = "https://telegram.me/+inqfdUkMsHM5MjY9";   // where to auto-redirect
-const START_SECONDS = 20;                            // countdown seconds
-/* -------------------------------- */
-
-document.getElementById("ctaTop").href = TELEGRAM_LINK;
-document.getElementById("ctaBottom").href = TELEGRAM_LINK;
-document.getElementById("yr").textContent = new Date().getFullYear();
-
-const timerEl = document.getElementById("timer");
-let secs = START_SECONDS;
-function fmt(n){ return (n<10? "0"+n : n); }
-function render(){ timerEl.textContent = `00:${fmt(secs)}`; }
-render();
-
-const intv = setInterval(()=>{
-  secs--; render();
-  if(secs <= 0){ clearInterval(intv); window.location.href = REDIRECT_URL; }
-},1000);
-
-/* Optional: smooth scroll to top CTA on load for mobile focus */
-window.addEventListener('load', ()=> window.scrollTo(0,0));
+  let countdown = 10; // 10 seconds
+  function startTimer(){
+    countdown = 10;
+    let timer = setInterval(()=>{
+      document.getElementById("seconds").textContent = countdown < 10 ? "0"+countdown : countdown;
+      countdown--;
+      if(countdown < 0){
+        clearInterval(timer);
+        startTimer(); // reset again
+      }
+    },1000);
+  }
+  startTimer();
 </script>
 </body>
 </html>
